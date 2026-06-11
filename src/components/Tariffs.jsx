@@ -1,6 +1,5 @@
-import { useState, useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import Modal from './Modal'
 
 /* ── Контент попапов для каждого тарифа ─────────────────────
    Вставь свой код внутрь каждого компонента              */
@@ -87,7 +86,7 @@ const tariffs = [
       'Доступ ко всем материалам курса',
       'Шаблоны и инструменты',
     ],
-    cta: 'Записаться',
+    link: 'https://gamzatovruslan.ru/AISprintX5-1',
     variant: 'light',
   },
   {
@@ -103,7 +102,7 @@ const tariffs = [
       'Персональная работа + индивидуальные рекомендации',
       'Приоритетная поддержка куратора',
     ],
-    cta: 'Записаться',
+    link: 'https://gamzatovruslan.ru/AISprintX5-2',
     variant: 'dark',
     badge: 'ПОПУЛЯРНЫЙ',
   },
@@ -120,7 +119,7 @@ const tariffs = [
       'Приоритетные ответы и закрытые материалы',
       'Глубокая работа лично с куратором',
     ],
-    cta: 'Записаться',
+    link: 'https://gamzatovruslan.ru/AISprintX5-3',
     variant: 'light',
   },
 ]
@@ -148,18 +147,8 @@ function CheckWhite() {
 export default function Tariffs() {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-60px' })
-  const [activeModal, setActiveModal] = useState(null)
 
   return (
-    <>
-    <Modal
-      isOpen={!!activeModal}
-      onClose={() => setActiveModal(null)}
-      tariff={activeModal}
-    >
-      {activeModal && modalComponents[activeModal] && (() => { const C = modalComponents[activeModal]; return <C key={activeModal} /> })()}
-    </Modal>
-
     <section id="tariffs" style={{ background: '#FFFFFF', padding: 'clamp(60px, 8vw, 120px) 0 60px' }}>
       <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 clamp(20px, 4vw, 48px)' }}>
 
@@ -276,9 +265,11 @@ export default function Tariffs() {
                   </ul>
 
                   {/* CTA */}
-                  <button
-                    onClick={() => setActiveModal(t.name)}
-                    className="mt-8 w-full flex items-center justify-between font-black text-white transition-all duration-200 hover:scale-[1.02] cursor-pointer"
+                  <a
+                    href={t.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-8 flex items-center justify-between font-black text-white transition-all duration-200 hover:scale-[1.02]"
                     style={{
                       height: '68px',
                       background: '#FF0000',
@@ -286,7 +277,7 @@ export default function Tariffs() {
                       fontSize: '18px',
                       padding: '0 24px',
                       boxShadow: '0 12px 32px rgba(255,0,0,0.25)',
-                      border: 'none',
+                      textDecoration: 'none',
                       letterSpacing: '0.02em',
                     }}
                   >
@@ -299,7 +290,7 @@ export default function Tariffs() {
                         <path d="M3 8h10M9 4l4 4-4 4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </span>
-                  </button>
+                  </a>
                 </div>
               </motion.div>
             )
@@ -392,6 +383,5 @@ export default function Tariffs() {
 
       </div>
     </section>
-    </>
   )
 }
