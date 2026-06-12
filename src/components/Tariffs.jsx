@@ -28,7 +28,7 @@ function ModalStandart() {
   return (
     <div>
       <h3 className="font-black" style={{ fontSize: '26px', color: '#111111', letterSpacing: '-0.02em', marginBottom: '20px' }}>
-        Тариф Стандарт — 42 000 ₽
+        Тариф Стандарт — 48 000 ₽
       </h3>
       <div ref={ref} />
     </div>
@@ -43,7 +43,7 @@ function ModalBusiness() {
   return (
     <div>
       <h3 className="font-black" style={{ fontSize: '26px', color: '#111111', letterSpacing: '-0.02em', marginBottom: '20px' }}>
-        Тариф Бизнес — 84 000 ₽
+        Тариф Бизнес — 96 000 ₽
       </h3>
       <div ref={ref} />
     </div>
@@ -75,7 +75,7 @@ const modalComponents = {
 const tariffs = [
   {
     name: 'Стандарт',
-    price: '42 000',
+    price: '48 000',
     oldPrice: '60 000',
     access: '5 месяцев',
     for: 'Специалисты и новички с целью освоения новой профессии',
@@ -91,7 +91,7 @@ const tariffs = [
   },
   {
     name: 'Бизнес',
-    price: '84 000',
+    price: '96 000',
     oldPrice: '120 000',
     access: '7 месяцев',
     for: 'Предприниматели и руководители, внедряющие ИИ в проект',
@@ -303,8 +303,7 @@ export default function Tariffs() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-10 grid gap-6"
-          style={{ gridTemplateColumns: '1fr 1fr' }}
+          className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6"
         >
           {/* Payment options */}
           <div
