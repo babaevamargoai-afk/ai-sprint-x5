@@ -281,7 +281,7 @@ export default function Tariffs() {
                       letterSpacing: '0.02em',
                     }}
                   >
-                    <span>Оставить заявку</span>
+                    <span>Перейти к оплате</span>
                     <span
                       className="flex items-center justify-center rounded-full"
                       style={{ width: '40px', height: '40px', background: 'rgba(255,255,255,0.2)', border: '1.5px solid rgba(255,255,255,0.3)' }}
