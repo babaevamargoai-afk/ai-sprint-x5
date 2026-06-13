@@ -148,6 +148,7 @@ export default function Footer() {
             <div className="flex gap-6">
               {[
                 { label: 'Политика конфиденциальности', href: '#' },
+                { label: 'Политика обработки персональных данных', href: 'https://gamzatovruslan.getcourse.ru/cms/system/legal' },
                 { label: 'Договор оферты', href: 'https://gamzatovruslan.ru/oferta-sprint' },
               ].map(l => (
                 <a key={l.label} href={l.href} target={l.href !== '#' ? '_blank' : undefined} rel="noopener noreferrer"
