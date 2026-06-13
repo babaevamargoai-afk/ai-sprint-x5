@@ -146,13 +146,16 @@ export default function Footer() {
               © 2026 AI Sprint X5. Все права защищены.
             </p>
             <div className="flex gap-6">
-              {['Политика конфиденциальности', 'Договор оферты'].map(l => (
-                <a key={l} href="#"
+              {[
+                { label: 'Политика конфиденциальности', href: '#' },
+                { label: 'Договор оферты', href: 'https://gamzatovruslan.ru/oferta-sprint' },
+              ].map(l => (
+                <a key={l.label} href={l.href} target={l.href !== '#' ? '_blank' : undefined} rel="noopener noreferrer"
                   style={{ fontSize: '15px', color: 'rgba(255,255,255,0.3)', textDecoration: 'none' }}
                   onMouseEnter={e => e.target.style.color = 'rgba(255,255,255,0.6)'}
                   onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.3)'}
                 >
-                  {l}
+                  {l.label}
                 </a>
               ))}
             </div>
