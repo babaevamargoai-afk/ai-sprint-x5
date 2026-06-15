@@ -28,7 +28,7 @@ function ModalStandart() {
   return (
     <div>
       <h3 className="font-black" style={{ fontSize: '26px', color: '#111111', letterSpacing: '-0.02em', marginBottom: '20px' }}>
-        Тариф Стандарт — 48 000 ₽
+        Тариф Стандарт — 60 000 ₽
       </h3>
       <div ref={ref} />
     </div>
@@ -43,7 +43,7 @@ function ModalBusiness() {
   return (
     <div>
       <h3 className="font-black" style={{ fontSize: '26px', color: '#111111', letterSpacing: '-0.02em', marginBottom: '20px' }}>
-        Тариф Бизнес — 96 000 ₽
+        Тариф Бизнес — 120 000 ₽
       </h3>
       <div ref={ref} />
     </div>
@@ -75,8 +75,8 @@ const modalComponents = {
 const tariffs = [
   {
     name: 'Стандарт',
-    price: '48 000',
-    oldPrice: '60 000',
+    price: '60 000',
+    oldPrice: '48 000',
     access: '5 месяцев',
     for: 'Специалисты и новички с целью освоения новой профессии',
     features: [
@@ -91,8 +91,8 @@ const tariffs = [
   },
   {
     name: 'Бизнес',
-    price: '96 000',
-    oldPrice: '120 000',
+    price: '120 000',
+    oldPrice: '96 000',
     access: '7 месяцев',
     for: 'Предприниматели и руководители, внедряющие ИИ в проект',
     features: [
