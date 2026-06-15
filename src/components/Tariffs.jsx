@@ -221,9 +221,6 @@ export default function Tariffs() {
                         {t.price} ₽
                       </span>
                     </div>
-                    <p style={{ fontSize: '16px', color: dark ? 'rgba(255,255,255,0.35)' : '#AAAAAA', marginTop: '4px', textDecoration: 'line-through' }}>
-                      {t.oldPrice} ₽
-                    </p>
                   </div>
 
                   {/* Access */}
