@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://gamzatovruslan.ru/close",
+      "permanent": false
+    }
+  ]
+}
